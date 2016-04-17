@@ -43,14 +43,14 @@ function logger(label, data) {
 function modder(channel,note,velocity) {
     val = ['','-'];
     val1 = val[Math.floor(Math.random() * 2)];
-    val2 = getRandomIntInclusive(50,100);
-    wid = getRandomIntInclusive(50,100) + 'vw';
+    val2 = Math.abs(100-Math.floor(note*velocity)/2); //getRandomIntInclusive(50,100);
+    wid = val2 + 'vw';
     hei = 'calc(' + val2 + '% - 35px)';
     mHei = ((100 - val2) / 2) + 'vh';
     col = rColor();
-    
+    console.log(val2);
     if(channel == 0) {
-        target.css('transform','translateX('+val1+note+'px)');
+        target.css('transform','translateX('+val1+(100-Math.floor(note*velocity)/2)+'vw)');
         //target.find('div.text').css('opacity','.' + Math.floor(Math.random() * 10));
     }
     if(channel == 1) {
