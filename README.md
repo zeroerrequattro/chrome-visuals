@@ -14,7 +14,7 @@ For now, visuals are triggered on the first 4 MIDI channels so, in order to make
 - First, set the arduinoboy on MIDIOUT mode
 - Set the LSDJ song on MIDIOUT mode
 - Connect the gameboy, the arduinoboy and the PC together
-- Open the [index.html](blob/master/index.html) with Chrome
+- Open the [index.html](index.html) with Chrome
 - On LSDJ, set the MIDI commands on phrase section:<br>
 __N__ Sends a MIDI Note – Absolute to the value placed in the effect. N00 sends note off, N01-N6F send notes 1 to 112.<br>
 __Q__ Sends a MIDI Note relative to the current channel’s pitch. The effect value is a offset. so Q0C in PU1 would send a note 1 octave higher than what Pu1 is currently playing. This is useful as a table command to track midi notes as normal notes in the sequencer.<br>
